@@ -8,7 +8,7 @@ namespace Lexicon_Methods
         static void Main(string[] args) {
             WriteLine(DisplayUserName());
             WriteLine(PrefixWithHashtag());
-            WriteLine(AskUser("ett nummer"));
+            WriteLine(FormatName("Thord", "Möller"));
         }
     }
 }

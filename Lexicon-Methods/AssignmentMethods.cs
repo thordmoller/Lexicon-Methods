@@ -33,7 +33,7 @@ namespace Lexicon_Methods
         /// </summary>
         /// <param name="question">question for the user</param>
         /// <returns>The users answer</returns>
-        public static string AskUser(string question) {
+        private static string AskUser(string question) {
 
             string? answer;
 
@@ -43,8 +43,25 @@ namespace Lexicon_Methods
             return answer ?? "No answer was given";
         }
 
-        public static string EnterSomething(string word) {
+        /// <summary>
+        /// Task 4: Asks the user to enter something
+        /// </summary>
+        /// <param name="word">Subject the user should enter</param>
+        /// <returns>The users answer</returns>
+        private static string EnterSomething(string word) {
+
             return AskUser("Please enter a " + word);
+        }
+
+        /// <summary>
+        /// Formats the way a first and last name are displayed
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <returns>lastname, firstname</returns>
+        public static string FormatName(string firstName, string lastName) {
+
+            return lastName + ", " + firstName;
         }
 
     }
