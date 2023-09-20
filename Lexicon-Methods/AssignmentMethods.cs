@@ -8,8 +8,14 @@ namespace Lexicon_Methods
 {
     internal class AssignmentMethods
     {
-        public static void print() {
-            Console.WriteLine("hej");
+        public static void DisplayUserMessage() {
+            string? name;
+            string? text;
+            Console.WriteLine("Please enter your name");
+            name = Console.ReadLine();
+            Console.WriteLine("Please enter a statement that represents you");
+            text = Console.ReadLine();
+            Console.WriteLine(name + " says: " + text);
         }
 
     }
