@@ -8,15 +8,17 @@ namespace Lexicon_Methods
 {
     internal class AssignmentMethods
     {
-        public static void DisplayUserMessage() {
+        /// <summary>
+        /// Asks user for their name and a statement. Prints both
+        /// </summary>
+        public static void DisplayUserName() {
             string? name;
-            string? text;
             Console.WriteLine("Please enter your name");
             name = Console.ReadLine();
-            Console.WriteLine("Please enter a statement that represents you");
-            text = Console.ReadLine();
-            Console.WriteLine(name + " says: " + text);
+            Console.WriteLine(name);
         }
+
+
 
     }
 }
