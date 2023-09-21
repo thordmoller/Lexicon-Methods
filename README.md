@@ -8,3 +8,6 @@ Xunit testmethods, that test the assignment methods, are in the "UnitTest1" clas
 
 #  Assignment Tasks:
 ![methods-tasks](https://github.com/thordmoller/Lexicon-Methods/assets/43022745/35dd7401-8ba9-4a97-9af6-83d87d168f64)
+
+
+![bild](https://github.com/thordmoller/Lexicon-Methods/assets/43022745/fb52a709-ee05-401e-ad4a-5865428ddb91)
