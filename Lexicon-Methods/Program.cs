@@ -6,8 +6,9 @@ namespace Lexicon_Methods
     internal class Program
     {
         static void Main(string[] args) {
+
             WriteLine(DisplayUserName());
-            WriteLine(PrefixWithHashtag());
+            WriteLine(PrefixUserInputWithHashtag());
             WriteLine(FormatName("Thord", "Möller"));
         }
     }
