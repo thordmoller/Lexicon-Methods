@@ -37,6 +37,7 @@ namespace Lexicon_Methods
         private static string PrefixString(string prefix, string input) {
 
             //I made this method mostly for the Xunit assignment, but it's also convenient to use in the PrefixUserInputWithHashtag method
+            //Update: I realized that maybe it would result in slightly less code if i simply didnt make a method for this, but i did it anyway since i prefix something at least twice
 
             return prefix + input;
         }
@@ -73,7 +74,7 @@ namespace Lexicon_Methods
         /// </summary>
         /// <param name="firstName"></param>
         /// <param name="lastName"></param>
-        /// <returns>lastname, firstname</returns>
+        /// <returns>Lastname, Firstname</returns>
         public static string FormatName(string firstName, string lastName) {
 
             firstName = CapitalizeFirstChar(firstName);
@@ -93,6 +94,51 @@ namespace Lexicon_Methods
             //Update: Now it's also part of the Xunit assignment that was just released
 
             string output = input[0].ToString().ToUpper() + input.Substring(1).ToLower();
+
+            return output;
+        }
+
+        /// <summary>
+        /// Xunit assignment: Formats a first and lastname and prefixes it with "#_" followed by capitalized 3 first letters of first and lastname.
+        /// The FormatName method will be used for this
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <returns>example: "#_Möller, Thord (MÖLTHO)"</returns>
+        public static string Formatter(string firstName, string lastName) {
+
+            string fullName = FormatName(firstName, lastName);  //formatting the first and last name to display in full with lastname first
+            string threeFirst = ThreeLetterLastNameFirst(firstName, lastName);  //the 3 letter version
+
+            string output = fullName + " (" + threeFirst + ")";     //combining the two
+
+            output = PrefixString("#_", output);    //adding the prefix to the whole output
+
+            return output;
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <returns>A string combining only 3 first letters of first and last name capitalized, with the lastname coming first </returns>
+        private static string ThreeLetterLastNameFirst(string firstName, string lastName) {
+
+            string output = ThreeFirstOnlyCapitalized(lastName) + ThreeFirstOnlyCapitalized(firstName);
+            return output;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Only the first 3 letters of a string uppercased</returns>
+        private static string ThreeFirstOnlyCapitalized(string input) {
+
+            string output = input.Substring(0, 3);  //3 first
+            output = output.ToUpper(); //uppercase
 
             return output;
         }
